@@ -9,7 +9,7 @@ class FavoritesController < ApplicationController
   
   def destroy
     post_image=PostImage.find(params[:post_image_id])
-    favorite=current_user.favorites.find_by(post_image_id: poat_image.id)
+    favorite=current_user.favorites.find_by(post_image_id: post_image.id)
     favorite.destroy
     redirect_to post_image_path(post_image)
   end
